@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  transmission-rss:
+    image: reverie89/transmission-rss
+    container_name: transmission-rss
+    restart: unless-stopped
+    volumes:
+      - "/opt/docker/transmission-rss:/config"

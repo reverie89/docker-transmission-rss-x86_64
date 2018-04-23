@@ -1,0 +1,17 @@
+update_interval: 600
+
+feeds:
+  - url: /can/be/a/local/path/to/feed.rss
+    regex: "(.*)ユニコードは大丈夫(.*?) .*"
+    fromDate: "2018-04-21 12:57:00"
+  - url: http://localhost:9117/jackett/api/v2.0/indexers/XXXXX/results/torznab/api?apikey=XXXXXXXXXXXXXXXXXXXXX&t=search&cat=&q=
+    contains: "Torrent name must contain this string"
+    fromDate: "2000-01-01 00:00:00"
+    startPaused: true
+
+server:
+  - host: 192.168.1.100
+  - port: 9091
+  - rpc_path: /transmission
+  - username: transmission
+  - password: transmission
